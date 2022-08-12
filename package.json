@@ -1,0 +1,105 @@
+{
+  "name": "@component_builder/webpack",
+  "version": "0.1.0",
+  "description": "The minimal webpack component builder with type declaration.",
+  "author": "Sh Ka",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "bugs": {
+    "email": "shahrad.kashany@gmail.com"
+  },
+  "homepage": "",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "webpack",
+    "typescript",
+    "type declartion"
+  ],
+  "scripts": {
+    "typescript": "tsc -p tsconfig.json",
+    "build": "yarn build:legacy && yarn build:modern && yarn build:node && yarn build:stable && yarn build:types && yarn build:copy-files ",
+    "build:legacy": "node ./scripts/build legacy",
+    "build:modern": "node ./scripts/build modern",
+    "build:node": "node ./scripts/build node",
+    "build:stable": "node ./scripts/build stable",
+    "build:copy-files": "node ./scripts/copyFiles.js",
+    "build:types": "node ./scripts/buildTypes",
+    "prebuild": "rimraf build tsconfig.build.tsbuildinfo",
+    "eslint": "eslint . --cache --report-unused-disable-directives --ext .js,.ts,.tsx --max-warnings 0",
+    "eslint:ci": "eslint . --report-unused-disable-directives --ext .js,.ts,.tsx --max-warnings 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/",
+    "directory": ""
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.18.6",
+    "@mui/utils": "^5.4.1",
+    "clsx": "^1.2.1",
+    "prop-types": "^15.8.1",
+    "reselect": "^4.1.6"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2 || ^18.0.0",
+    "react-dom": "^17.0.2 || ^18.0.0"
+  },
+  "setupFiles": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.6",
+    "@babel/plugin-transform-object-assign": "^7.18.6",
+    "@babel/plugin-transform-react-constant-elements": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@babel/register": "^7.18.6",
+    "@babel/traverse": "^7.18.6",
+    "@babel/types": "^7.18.6",
+    "@types/fs-extra": "^9.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-optimize-clsx": "^2.6.2",
+    "babel-plugin-react-remove-properties": "^0.3.0",
+    "babel-plugin-search-and-replace": "^1.1.1",
+    "babel-plugin-tester": "^10.1.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-material-ui": "^1.0.1",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^10.1.0",
+    "rimraf": "^3.0.2",
+    "tsc": "^2.0.4",
+    "typescript": "^4.6.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "yargs": "^16.1.1"
+  }
+}

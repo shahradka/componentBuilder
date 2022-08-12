@@ -1,0 +1,7 @@
+/.git
+/lerna.json
+/packages/grid/x-data-grid/src/lib
+CHANGELOG.md
+dist
+node_modules
+build

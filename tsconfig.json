@@ -1,0 +1,30 @@
+{
+
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports":true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noUnusedLocals": false,
+    "noImplicitAny": false,
+    "baseUrl": "./",
+    "noErrorTruncation": false,
+    "allowJs": true,
+  },
+  "paths": {
+    "@toktokeyapp_components/business": ["./src"],
+  },
+  "exclude": [
+    "**/node_modules/!(@mui)/**",
+    "**/.!(storybook)/**/*",
+    "**/build/**/*",
+    "docs/export/**/*"
+  ],
+  "include": ["src/**/*"]
+}
